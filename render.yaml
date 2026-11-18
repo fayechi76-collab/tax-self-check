@@ -1,0 +1,18 @@
+# 奥地利工资税退税自测：Render 静态站点
+# 纯静态 HTML，无环境变量。静态站点有免费档；超量流量或构建时长可能产生费用，以 https://render.com/pricing 为准。
+services:
+  - type: web
+    runtime: static
+    name: tax-self-check
+    buildCommand: "true"
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: no-referrer

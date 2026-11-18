@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>奥地利工资税退税自测｜维也纳中文报税小助手</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1f2a37;--mut:#6b7280;--pri:#c8102e;--pri2:#fde8eb;--ok:#15803d;--mid:#b45309;--low:#6b7280;--line:#e5e7eb;--r:16px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:480px;margin:0 auto;padding:16px 16px 40px}
+header{display:flex;align-items:center;gap:10px;margin:4px 0 14px}
+.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(180deg,var(--pri) 33%,#fff 33% 66%,var(--pri) 66%);box-shadow:0 0 0 1px var(--line)}
+header b{font-size:15px;display:block}header small{color:var(--mut);font-size:12px}
+.card{background:var(--card);border-radius:var(--r);padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+h1{font-size:24px;line-height:1.3;margin:0 0 10px}
+h2{font-size:19px;line-height:1.4;margin:0 0 6px}
+p{margin:0 0 12px}.mut{color:var(--mut);font-size:14px}
+.pill{display:inline-block;background:var(--pri2);color:var(--pri);border-radius:99px;padding:2px 10px;font-size:13px;font-weight:600;margin-bottom:10px}
+ul.ticks{padding:0;margin:0 0 16px;list-style:none}ul.ticks li{padding-left:24px;position:relative;margin:6px 0}
+ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
+.btn{display:block;width:100%;border:0;border-radius:12px;padding:14px;font-size:17px;font-weight:600;background:var(--pri);color:#fff;cursor:pointer}
+.btn.sec{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn:disabled{opacity:.4}
+.row{display:flex;gap:10px;margin-top:16px}.row .btn{flex:1}
+.bar{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin:0 0 14px}.bar i{display:block;height:100%;background:var(--pri);transition:width .25s}
+.step{font-size:13px;color:var(--mut);margin-bottom:6px}
+.opt{display:flex;align-items:flex-start;gap:10px;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;margin:8px 0;font-size:16px;color:var(--ink);cursor:pointer}
+.opt .box{flex:0 0 20px;height:20px;border:2px solid #cbd5e1;border-radius:50%;margin-top:2px}
+.opt.multi .box{border-radius:6px}
+.opt.on{border-color:var(--pri);background:var(--pri2)}.opt.on .box{border-color:var(--pri);background:var(--pri);box-shadow:inset 0 0 0 3px #fff}
+.hint{font-size:13px;color:var(--mut);background:#f9fafb;border-radius:10px;padding:10px 12px;margin-top:8px}
+.verdict{border-radius:var(--r);padding:18px;margin-bottom:14px;color:#fff}
+.verdict.high{background:var(--ok)}.verdict.mid{background:var(--mid)}.verdict.low{background:var(--low)}
+.verdict b{font-size:22px;display:block}
+.sec-t{font-size:16px;font-weight:700;margin:18px 0 8px}
+.item{border-left:3px solid var(--pri);padding:2px 0 2px 12px;margin:10px 0}
+.item b{display:block;font-size:15px}.item span{font-size:14px;color:var(--mut)}
+.warn{border-left-color:var(--mid)}
+.chk{list-style:none;padding:0;margin:0}.chk li{padding:8px 0 8px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:15px}
+.chk li:before{content:"☐";position:absolute;left:4px;top:6px;font-size:18px;color:var(--pri)}
+.chk small{display:block;color:var(--mut);font-size:13px}
+.deadline{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:12px 14px;font-size:14px;margin:14px 0}
+.cta{background:var(--ink);color:#fff;border-radius:var(--r);padding:18px;margin:14px 0;text-align:center}
+.cta b{font-size:18px;display:block;margin-bottom:4px}.cta small{color:#cbd5e1;display:block;margin-top:8px}
+.cta.hero{padding:20px 16px;box-shadow:0 8px 24px rgba(31,42,55,.28);outline:3px solid #fff;outline-offset:2px}
+.cta.hero b{font-size:22px}
+.cta .qr-hint{font-size:16px;font-weight:700;margin:10px 0 6px}
+.cta .qr{display:block;width:200px;max-width:64%;height:auto;margin:0 auto 8px;background:#fff;border-radius:12px;padding:8px}
+.cta.soft{background:#fff;color:var(--ink);border:1px solid var(--line);text-align:center}
+.cta.soft small{color:var(--mut)}
+.cta.soft .qr-hint{color:var(--ink)}
+footer{font-size:12px;color:var(--mut);margin-top:22px;line-height:1.55}
+footer a{color:var(--mut);word-break:break-all}
+footer ol{padding-left:18px;margin:6px 0}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo" aria-hidden="true"></div><div><b>维也纳中文报税小助手</b><small>奥地利年度工资税申报（Arbeitnehmerveranlagung）中文服务</small></div></header>
+
+<!-- 开始页 -->
+<section id="start" class="card">
+  <span class="pill">免费 · 2 分钟 · 匿名</span>
+  <h1>在奥地利上班，<br>你的工资税可能退得回来</h1>
+  <p>奥地利工资税是按“全年收入都一样”来预扣的。中途入职、换工作、通勤、带孩子、自费进修……很多情况都可能多扣了税，可以申请年度申报（Arbeitnehmerveranlagung）退回来。</p>
+  <ul class="ticks">
+    <li>约 10 个简单问题，选一选就行</li>
+    <li>告诉你退税可能性高不高、原因是什么</li>
+    <li>给你一份专属的材料清单</li>
+    <li>所有答案只在你手机里计算，不上传、不记录</li>
+  </ul>
+  <div class="deadline">⏰ <b>2021 年的税</b>最晚可以在 <b>2026 年 12 月 31 日</b>前自愿申报，过期就不能再申请退了。<span id="daysLeft"></span></div>
+  <button class="btn" id="go">开始自测</button>
+  <p class="mut" style="margin-top:12px">本工具只做粗略自测，不构成法律或税务建议，最终以税务局（Finanzamt）核定为准。</p>
+</section>
+
+<!-- 问答 -->
+<section id="quiz" class="card hide">
+  <div class="step" id="stepTxt"></div>
+  <div class="bar"><i id="barFill"></i></div>
+  <h2 id="qTitle"></h2>
+  <p class="mut" id="qSub"></p>
+  <div id="opts"></div>
+  <div class="hint hide" id="qHint"></div>
+  <div class="row"><button class="btn sec" id="back">上一步</button><button class="btn" id="next">下一步</button></div>
+</section>
+
+<!-- 结果 -->
+<section id="result" class="hide">
+  <div class="verdict" id="verdict"></div>
+  <div class="cta hero hide" id="contactHero">
+    <b>联系我帮你申报</b>
+    <span id="contactLead">由奥地利公开任命工资核算师（Öffentlich bestellte Personalverrechnerin）提供年度工资税申报咨询与递交服务</span>
+    <div class="qr-hint">长按识别二维码，加我帮你申报</div>
+    <img class="qr" src="wechat-qr.png" width="200" height="295" alt="加我微信：会算账的猕猴桃">
+    <small>加我微信。把下面的材料清单截图发给我，先免费看看你的情况。</small>
+  </div>
+  <div class="card">
+    <div class="sec-t" style="margin-top:0">📌 为什么这么判断</div>
+    <div id="reasons"></div>
+    <div class="sec-t">🗂️ 你需要准备的材料</div>
+    <ul class="chk" id="checklist"></ul>
+    <div class="deadline" id="dl"></div>
+    <p class="mut">提醒：本结果只是根据你的选择做的粗略判断，不计算具体金额，不构成法律或税务建议。能不能退、退多少，由税务局（Finanzamt）最终核定；个别情况也可能需要补税。</p>
+    <button class="btn sec" id="again">重新测一次</button>
+  </div>
+  <div class="cta soft hide" id="contactSoft">
+    <b>也可以加我微信问问</b>
+    <span>不确定的话，可以把工资单（L16）发给我，先免费看一眼。</span>
+    <div class="qr-hint">长按识别二维码，加我微信</div>
+    <img class="qr" src="wechat-qr.png" width="200" height="295" alt="加我微信：会算账的猕猴桃">
+  </div>
+</section>
+
+<footer>
+  <p><b>说明：</b>本页面为免费自测工具，不收集任何数据，没有后台、没有统计代码，关闭页面即清空。结果仅供参考，不构成法律或税务建议，以税务局核定为准。</p>
+  <p><b>资料来源（奥地利财政部 BMF 官方页面）：</b></p>
+  <ol>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/verfahren-arbeitnehmerinnenveranlagung/arbeitnehmerinnenveranlagung.html" target="_blank" rel="noopener noreferrer">Arbeitnehmerveranlagung（五年申请期、换工作、L1/L1k/L1ab/L1i、强制申报情形）</a></li>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/verfahren-arbeitnehmerinnenveranlagung/verfahren-beim-finanzamt.html" target="_blank" rel="noopener noreferrer">Verfahren beim Finanzamt（五年期限）</a></li>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/verfahren-arbeitnehmerinnenveranlagung/antragslose-arbeitnehmerinnenveranlagung.html" target="_blank" rel="noopener noreferrer">Antragslose Arbeitnehmerveranlagung（自动退税、捐款/教会税自动报送）</a></li>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/was-kann-ich-geltend-machen/werbungskosten/werbungskosten-ueberblick.html" target="_blank" rel="noopener noreferrer">Werbungskosten（€132 职业费用定额、L34）</a></li>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/pendlerfoerderung-das-pendlerpauschale/allgemeines-zum-pendlerpauschale.html" target="_blank" rel="noopener noreferrer">Pendlerpauschale（小/大通勤补贴的距离门槛）</a></li>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/steuertarif-steuerabsetzbetraege/familienbonus-plus.html" target="_blank" rel="noopener noreferrer">Familienbonus Plus / Kindermehrbetrag</a></li>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/steuertarif-steuerabsetzbetraege/alleinverdiener-alleinerzieher-absetzbetrag.html" target="_blank" rel="noopener noreferrer">Alleinverdiener- / Alleinerzieherabsetzbetrag</a></li>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/steuertarif-steuerabsetzbetraege/absetzbetraege-niedrige-einkommen-negativsteuer.html" target="_blank" rel="noopener noreferrer">低收入的 SV-Rückerstattung（“负所得税”）</a></li>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/was-kann-ich-geltend-machen/aussergewoehnliche-belastungen/aussergewoehnliche-belastungen-ueberblick.html" target="_blank" rel="noopener noreferrer">Außergewöhnliche Belastungen（自付额 Selbstbehalt）</a></li>
+    <li><a href="https://www.bmf.gv.at/themen/steuern/arbeitnehmerveranlagung/was-kann-ich-geltend-machen/sonderausgaben/sonderausgaben-im-einzelnen.html" target="_blank" rel="noopener noreferrer">Sonderausgaben im Einzelnen（捐款、教会税自动报送；工资核算师费用可抵扣）</a></li>
+  </ol>
+  <p>资料核对日期：2026-11-17。服务提供方为奥地利公开任命工资核算师，依职业范围提供年度工资税申报咨询及以递交人（Bote）身份递交申报，不提供代理。</p>
+  <!-- Impressum：用户暂不加（先发公众号，经营者信息不注册）。若之后要加，取消下面注释，填入真名、地址、营业执照信息，或改为页脚链接。
+  <p>完整商户信息见 <a href="#impressum">Impressum</a>。</p>
+  -->
+</footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+var Q=[
+ {id:"years",multi:true,t:"哪些年份你在奥地利有工资收入（被扣过工资税）？",s:"可多选。每一年都要单独申报。",
+  o:[["2021","2021（今年年底截止！）"],["2022","2022"],["2023","2023"],["2024","2024"],["2025","2025"]]},
+ {id:"partial",t:"这些年里，有没有哪一年只工作了几个月、中途换过工作，或收入忽高忽低？",s:"比如年中才来奥地利、失业过一段时间、换了雇主、加班费很多等。",
+  o:[["yes","有"],["no","没有，全年同一份工、收入稳定"],["ns","不清楚"]],
+  h:"BMF：工资税按“全年收入一样”预扣；收入有波动（例如换工作）时，年度申报会把税重新平均计算，常常能退税。"},
+ {id:"parallel",t:"同一时间段里，有没有同时拿两份（或以上）工资？",s:"例如同时在两家餐馆打工、正职加兼职。",
+  o:[["yes","有"],["no","没有"]],
+  h:"注意：同时有多份工资属于“必须申报”的情形，可能退税，也可能需要补税。"},
+ {id:"commute",t:"你上班单程通勤距离大概多远？",s:"按住处到工作地点的单程距离。",
+  o:[["lt20","20 公里以内，公共交通可以用"],["ge20","20 公里以上，公共交通可以用"],["noPT","2 公里以上，但没有合适的公共交通（太远、班次没有、上下班时间没车）"],["ns","不清楚"]]},
+ {id:"l34",t:"你有没有把通勤补贴（Pendlerpauschale，表格 L34）交给雇主？",s:"交了的话，工资条上通常会体现。",
+  o:[["yes","交过了"],["no","没交过"],["ns","不知道"]],skip:function(a){return a.commute==="lt20"}},
+ {id:"wk",multi:true,t:"你有没有为了工作自己花钱？",s:"可多选。总额要超过每年已自动计入的 €132 定额才有效果。",
+  o:[["course","职业进修 / 培训课程"],["german","工作需要的德语课"],["tools","工作用的电脑、工具、工作服、专业书"],["union","工会会费（ÖGB 等）"],["none","都没有"]],none:"none"},
+ {id:"kids",t:"你有孩子吗？在奥地利领家庭补助（Familienbeihilfe）吗？",s:"",
+  o:[["no","没有孩子 / 不领 Familienbeihilfe"],["employer","有，已通过雇主（表格 E30）领了 Familienbonus Plus"],["notyet","有，但没交给雇主 / 不清楚"]]},
+ {id:"single",t:"以下哪种情况符合你？",s:"任一年超过 6 个月符合即可。",
+  o:[["alleinerz","单亲：自己带孩子，没和伴侣一起生活"],["alleinverd","已婚/登记伴侣有孩子，配偶收入很低（家里主要靠我）"],["none","都不是"]],skip:function(a){return a.kids==="no"}},
+ {id:"ab",t:"有没有自己掏钱付过较大额的看病费用？",s:"例如牙科、眼镜、药费、治疗、住院自付部分，保险没报销的。",
+  o:[["yes","有，金额不小"],["no","没有 / 很少"]],
+  h:"这类费用要超过按收入计算的“自付额”（Selbstbehalt）才有作用；与残疾相关的费用规则不同。"},
+ {id:"lowinc",t:"有没有哪一年全年收入很低（例如只做 Geringfügig 小时工、半年没工作）？",s:"",
+  o:[["yes","有"],["no","没有"]]},
+ {id:"foreign",t:"同一年里，你有没有国外的收入？",s:"例如国内的工资、房租，或外国雇主付的工资。",
+  o:[["yes","有"],["no","没有"],["ns","不确定"]]}
+];
+var A={},stack=[],cur=0;
+var $=function(id){return document.getElementById(id)};
+function visible(i){return !Q[i].skip||!Q[i].skip(A)}
+function nextIdx(i){i++;while(i<Q.length&&!visible(i))i++;return i}
+function total(){var n=0;for(var i=0;i<Q.length;i++)if(visible(i))n++;return n}
+function show(sec){["start","quiz","result"].forEach(function(s){$(s).classList.toggle("hide",s!==sec)});window.scrollTo(0,0)}
+function render(){
+ var q=Q[cur],v=A[q.id];
+ $("stepTxt").textContent="第 "+(stack.length+1)+" / "+total()+" 题";
+ $("barFill").style.width=Math.round(stack.length/total()*100)+"%";
+ $("qTitle").textContent=q.t;$("qSub").textContent=q.s||"";
+ var box=$("opts");box.innerHTML="";
+ q.o.forEach(function(o){
+  var b=document.createElement("button");b.type="button";b.className="opt"+(q.multi?" multi":"");
+  var on=q.multi?(v||[]).indexOf(o[0])>=0:v===o[0];if(on)b.classList.add("on");
+  b.innerHTML='<span class="box"></span><span></span>';b.lastChild.textContent=o[1];
+  b.onclick=function(){
+   if(q.multi){var arr=(A[q.id]||[]).slice();var k=arr.indexOf(o[0]);
+    if(k>=0)arr.splice(k,1);else{ if(o[0]===q.none)arr=[];else if(q.none)arr=arr.filter(function(x){return x!==q.none});arr.push(o[0]);}
+    A[q.id]=arr;}else A[q.id]=o[0];
+   render();};
+  box.appendChild(b);});
+ if(q.h){$("qHint").textContent=q.h;$("qHint").classList.remove("hide")}else $("qHint").classList.add("hide");
+ var ok=q.multi?(A[q.id]||[]).length>0:!!A[q.id];
+ $("next").disabled=!ok;$("next").textContent=nextIdx(cur)>=Q.length?"看结果":"下一步";
+}
+$("go").onclick=function(){A={};stack=[];cur=0;show("quiz");render()};
+$("next").onclick=function(){stack.push(cur);var n=nextIdx(cur);if(n>=Q.length){result();show("result")}else{cur=n;render();window.scrollTo(0,0)}};
+$("back").onclick=function(){if(!stack.length){show("start");return}cur=stack.pop();render()};
+$("again").onclick=function(){show("start")};
+
+function result(){
+ var score=0,R=[],W=[],M=[];
+ function r(pts,t,d){score+=pts;R.push([t,d])}
+ if(A.partial==="yes")r(3,"中途入职 / 换工作 / 收入有波动","工资税是按全年收入平均来预扣的，收入不均的年份，年度申报重新计算后常常能退。");
+ else if(A.partial==="ns")r(1,"收入是否有波动还不确定","看一下每年的工资单（L16）就能知道。");
+ var pend=(A.commute==="ge20"||A.commute==="noPT");
+ if(pend&&A.l34!=="yes")r(3,"可能可以补申请通勤补贴（Pendlerpauschale）","通勤距离符合门槛（公交可用 ≥20 公里，或公交不合适 ≥2 公里），没通过雇主申请的，可以在年度申报里补。同时还有 Pendlereuro。");
+ else if(pend)r(1,"通勤补贴已通过雇主申请","年度申报时核对一下距离和金额是否正确。");
+ else if(A.commute==="ns")r(1,"通勤距离待确认","可用 BMF 的 Pendlerrechner 算一下是否符合门槛。");
+ var wk=(A.wk||[]).filter(function(x){return x!=="none"});
+ if(wk.length){r(wk.length>=2?2:1,"有自费的职业相关支出（Werbungskosten）","超过每年已自动计入的 €132 定额的部分可以申报，"+(wk.indexOf("union")>=0?"工会会费若未经雇主扣除也可申报，":"")+"要保留发票/收据。")}
+ if(A.kids==="notyet")r(3,"有孩子但没通过雇主领 Familienbonus Plus","可以在年度申报里补领（Familienbonus Plus，低收入者可能还有 Kindermehrbetrag）。");
+ else if(A.kids==="employer")r(1,"已通过雇主领 Familienbonus Plus","年度申报时会再核对，可能还涉及 Kindermehrbetrag 或伴侣之间的分配。");
+ if(A.single==="alleinerz"||A.single==="alleinverd")r(3,A.single==="alleinerz"?"单亲（Alleinerzieherabsetzbetrag）":"单收入家庭（Alleinverdienerabsetzbetrag）","BMF 明确：即使雇主已经给你算过，也要在年度申报里申请。这一项即使收入低、没交多少税，也可能带来退款。");
+ if(A.ab==="yes")r(1,"自付医疗费等特殊负担（außergewöhnliche Belastungen）","超过按收入计算的自付额（Selbstbehalt）的部分才能抵税；有孩子或单收入/单亲时自付额会降低。");
+ if(A.lowinc==="yes")r(2,"有低收入年份","收入很低时，可能拿回部分社保（SV-Rückerstattung，俗称“负所得税”）。");
+ if(A.parallel==="yes")W.push(["同时有多份工资：属于必须申报的情形","这种情况可能退税，也可能要补税，建议先请人看一下每份 L16 再决定。"]);
+ if(A.foreign==="yes")W.push(["有国外收入","要看奥地利和收入来源国的税收协定，可能影响税率甚至需要补税；申报时要附 L1i 表，需要专业评估。"]);
+ if(A.foreign==="ns")W.push(["是否有国外收入不确定","建议咨询时一起说明，避免漏报。"]);
+ var lvl=score>=4?"high":score>=2?"mid":"low";
+ if(A.foreign==="yes"&&lvl==="high")lvl="mid";
+ var mustFile=(A.parallel==="yes"||A.foreign==="yes");
+ var needContact=(lvl==="high"||lvl==="mid"||mustFile);
+ var txt={high:["退税可能性：高","你有好几项常见的退税原因，非常值得申报。"],mid:["退税可能性：中","有一些可能退税的原因，值得请人看一下工资单再决定。"],low:["退税可能性：低","从你的回答看暂时没发现明显的退税原因。不过税务局有时会自动退（antragslose Veranlagung），也可以拿工资单（L16）让人帮你看一眼。"]}[lvl];
+ $("verdict").className="verdict "+lvl;$("verdict").innerHTML="<b></b><span></span>";
+ $("verdict").firstChild.textContent=txt[0];$("verdict").lastChild.textContent=txt[1];
+ var h="";
+ function esc(s){return s.replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+ R.forEach(function(x){h+='<div class="item"><b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>'});
+ W.forEach(function(x){h+='<div class="item warn"><b>⚠️ '+esc(x[0])+'</b><span>'+esc(x[1])+'</span></div>'});
+ if(!h)h='<div class="item"><b>暂无明显退税原因</b><span>可以把工资单（L16）发给我免费看一下。</span></div>';
+ $("reasons").innerHTML=h;
+ var C=[["每一年的工资单 Lohnzettel（L16）","每个雇主每年一张，找雇主或在 FinanzOnline 里能看到"],["护照 / 居留卡（身份证件）","办理委托时需要核对身份"],["社保号 SV-Nummer（e-card 背面 10 位数字）",""],["FinanzOnline 账号或 ID Austria","没有的话也可以一起办理"],["银行账户 IBAN","退税打到这个账户"]];
+ if(pend)C.push(["通勤资料：住址、工作地址、上班时间、每月上班天数","用 BMF Pendlerrechner 计算并打印结果（L34 相关）"]);
+ if(wk.length){var m=[];if(wk.indexOf("course")>=0)m.push("课程");if(wk.indexOf("german")>=0)m.push("德语课");if(wk.indexOf("tools")>=0)m.push("电脑/工具/工作服/专业书");if(wk.indexOf("union")>=0)m.push("工会会费");C.push(["职业相关支出的发票/收据："+m.join("、"),"以及能说明与工作有关的材料（如雇主证明、课程说明）"])}
+ if(A.kids&&A.kids!=="no")C.push(["孩子资料：出生证明、孩子 SV-Nummer、Familienbeihilfe 证明","申报时填 L1k 表（Familienbonus Plus / Kindermehrbetrag）"]);
+ if(A.single==="alleinerz")C.push(["单亲证明：住址登记（Meldezettel）等","申请 Alleinerzieherabsetzbetrag"]);
+ if(A.single==="alleinverd")C.push(["配偶的身份资料和当年收入证明","申请 Alleinverdienerabsetzbetrag"]);
+ if(A.ab==="yes")C.push(["医疗费用的发票和保险报销单（只算自付部分）","申报时填 L1ab 表"]);
+ if(A.foreign==="yes"||A.foreign==="ns")C.push(["国外收入证明（工资单、租金收入、已缴外国税的凭证）","申报时填 L1i 表"]);
+ C.push(["其他：捐款、教会税、自愿保险的收据（如有）","这些通常由机构自动报送给税务局，带上方便核对"]);
+ $("checklist").innerHTML=C.map(function(x){return "<li>"+esc(x[0])+(x[1]?"<small>"+esc(x[1])+"</small>":"")+"</li>"}).join("");
+ var ys=(A.years||[]).slice().sort();var dl="⏰ <b>申报期限（五年）：</b>";
+ dl+=ys.map(function(y){return y+" 年 → "+(+y+5)+"-12-31 前"}).join("；")+"。";
+ if(ys.indexOf("2021")>=0)dl+="<br><b>2021 年今年年底就截止了，请尽快！</b>"+daysTxt();
+ $("dl").innerHTML=dl;
+ $("contactHero").classList.toggle("hide",!needContact);
+ $("contactSoft").classList.toggle("hide",needContact);
+ if(mustFile&&lvl==="low"){$("contactLead").textContent="这种情况可能必须申报。由奥地利公开任命工资核算师提供年度工资税申报咨询与递交服务，请先把材料清单或工资单发给我。";}
+ else $("contactLead").textContent="由奥地利公开任命工资核算师（Öffentlich bestellte Personalverrechnerin）提供年度工资税申报咨询与递交服务";
+ if(needContact){setTimeout(function(){var el=$("contactHero");if(el&&el.scrollIntoView)el.scrollIntoView({behavior:"smooth",block:"start"});},60);}
+}
+function daysTxt(){var d=Math.ceil((new Date(2026,11,31,23,59,59)-new Date())/864e5);return d>0?"（还剩约 "+d+" 天）":""}
+$("daysLeft").textContent=daysTxt();
+})();
+</script>
+</body>
+</html>
